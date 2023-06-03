@@ -7,61 +7,51 @@
 
         <title>Algoritmo piedra, papel o tijera</title>
         <script>
-            //OBTENIENDO LA ELECCIÓN DEL JUGADOR
+            //FUNCIÓN PARA LAS ALERTAS
+            function alertaDeElecciones( quienElije , eleccion ) {
+
+                if ( eleccion == 1 ) {
+                    alert( "El " + quienElije + " eligió piedra" );
+                } else if ( eleccion == 2 ) {
+                    alert( "El " + quienElije + " eligió papel" );
+                } else if ( eleccion == 3 ) {
+                    alert( "El " + quienElije + " eligió tijera" );
+                } else {
+                    alert( "Hubo un error con la elección del " + quienElije + " no es correcta" );
+                }
+            }
+
+            //FUNCIÓN PARA GENERAR NÚMEROS ALEATORIOS
+            function numeroAleatorio( min , max ) {
+                return Math.floor( Math.random() * ( max - min + 1 ) + min );
+            }
+
+            //FUNCIÓN PARA DECIDIR EL GANADOR
+            function quienGanaEntre ( eleccionJugador , eleccionOponente ) {
+                if ( eleccionJugador == eleccionOponente ) {
+                    alert( "¡EMPATE!" );
+                } else if ( eleccionJugador == 1 && eleccionOponente == 3 ) {
+                    alert( "¡GANASTE!" );
+                } else if ( eleccionJugador == 2 && eleccionOponente == 1 ) {
+                    alert( "¡GANASTE!" );
+                } else if ( eleccionJugador == 3 && eleccionOponente == 2 ) {
+                    alert( "¡GANASTE!" );
+                } else {
+                    alert( "PERDISTE" );
+                }
+            }
+
+            //ELECCIÓN DEL JUGADOR
             let eleccionDelJugador = 0;
-            eleccionDelJugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera");
-            // alert("Elegiste " + jugada);
+            eleccionDelJugador = prompt( "Elige: 1 para piedra, 2 para papel, 3 para tijera" );
+            alertaDeElecciones( "jugador" , eleccionDelJugador );
 
-            //INFORMANDO LA ELECCIÓN DEL JUGADOR
-            if (eleccionDelJugador == 1) {
-                alert("Elegiste piedra")
-            } 
-            else if (eleccionDelJugador == 2) {
-                alert("Elegiste papel")
-            } 
-            else if (eleccionDelJugador == 3) {
-                alert("Elegiste tijera")
-            } 
-            else {
-                alert("Elegiste otra cosa, así no puedes jugar >-<")
-            }
-
-            //OBTENIENDO LA ELECCIÓN DEL COMPUTADOR
-            let max = 3;
-            let min = 1;
-            let eleccionDelComputador = Math.floor( Math.random() * ( max - min + 1 ) + min );
-            
-            //INFORMANDO LA ELECCION DEL COMPUTADOR
-            if (eleccionDelComputador == 1) {
-                alert("La computadora eligió piedra");
-            } 
-            else if (eleccionDelComputador == 2) {
-                alert("La computadora eligió papel")
-            } 
-            else if (eleccionDelComputador == 3) {
-                alert("La computadora eligió tijera")
-            } 
-            else {
-                alert("Cometí un error programando la elección del computador")
-            }
+            //ELECCIÓN DEL COMPUTADOR
+            let eleccionDelComputador = numeroAleatorio( 1 , 3 );
+            alertaDeElecciones( "computador" , eleccionDelComputador );
 
             //DECIDIENDO EL GANADOR
-            if (eleccionDelJugador == eleccionDelComputador) {
-                alert("¡EMPATE!");
-            }
-            else if (eleccionDelJugador == 1 && eleccionDelComputador == 3) {
-                alert("¡GANASTE!");
-            }
-            else if (eleccionDelJugador == 2 && eleccionDelComputador == 1) {
-                alert("¡GANASTE!");
-            }
-            else if (eleccionDelJugador == 3 && eleccionDelComputador == 2) {
-                alert("¡GANASTE!");
-            }
-            else {
-                alert("PERDISTE");
-            }
-
+            quienGanaEntre ( eleccionDelJugador , eleccionDelComputador );
         </script>
     </head>
     <body>
