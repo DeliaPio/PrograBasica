@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Algoritmo piedra, papel o tijera</title>
+        <script>
+            //OBTENIENDO LA ELECCIÓN DEL JUGADOR
+            let eleccionDelJugador = 0;
+            eleccionDelJugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera");
+            // alert("Elegiste " + jugada);
+
+            //INFORMANDO LA ELECCIÓN DEL JUGADOR
+            if (eleccionDelJugador == 1) {
+                alert("Elegiste piedra")
+            } 
+            else if (eleccionDelJugador == 2) {
+                alert("Elegiste papel")
+            } 
+            else if (eleccionDelJugador == 3) {
+                alert("Elegiste tijera")
+            } 
+            else {
+                alert("Elegiste otra cosa, así no puedes jugar >-<")
+            }
+
+            //OBTENIENDO LA ELECCIÓN DEL COMPUTADOR
+            let eleccionDelComputador = 1;
+            
+            //INFORMANDO LA ELECCION DEL COMPUTADOR
+            if (eleccionDelComputador == 1) {
+                alert("La computadora eligió piedra");
+            } 
+            else if (eleccionDelComputador == 2) {
+                alert("La computadora eligió papel")
+            } 
+            else if (eleccionDelComputador == 3) {
+                alert("La computadora eligió tijera")
+            } 
+            else {
+                alert("Cometí un error programando la elección del computador")
+            }
+
+            //DECIDIENDO EL GANADOR
+            if (eleccionDelJugador == eleccionDelComputador) {
+                alert("¡EMPATE!");
+            }
+            else if (eleccionDelJugador == 1 && eleccionDelComputador == 3) {
+                alert("¡GANASTE!");
+            }
+            else if (eleccionDelJugador == 2 && eleccionDelComputador == 1) {
+                alert("¡GANASTE!");
+            }
+            else if (eleccionDelJugador == 3 && eleccionDelComputador == 2) {
+                alert("¡GANASTE!");
+            }
+            else {
+                alert("PERDISTE");
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>Piedra, papel o tijera</h1>
+    </body>
+</html>
