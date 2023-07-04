@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEMON!</title>
+    <script src="./js/pokemon.js"></script>
+</head>
+ <body>
+    <h1>POKEMON! 🔥💧🌱</h1>
+
+    <section id="seleccionar-mascota">
+        <h2>Elige tu mascota:</h2>
+
+        <label for="Charmander">Charmander</label>
+        <input type="radio" name="mascota" id="Charmander"/>
+
+        <label for="Bulbasaur">Bulbasaur</label>
+        <input type="radio" name="mascota" id="Bulbasaur">
+
+        <label for="Squirte">Squirte</label>
+        <input type="radio" name="mascota" id="Squirte">
+
+        <button id="boton-mascota">Seleccionar</button>
+    </section>
+
+    <section id="seleccionar-ataque">
+        <h2>Elige tu ataque:</h2>
+
+        <p>Tu mascota <span id='mascota-jugador'></span> tiene <span> 3</span> vidas</p>
+        <p>Las mascota <span id="mascota-enemigo"></span> del enemigo tiene <span> 3</span> vidas</p>
+
+        <p>
+            <button id="boton-fuego">Fuego 🔥</button>
+            <button id="boton-agua">Agua 💧</button>
+            <button ide="boton-tierra">Tierra 🌱</button>
+        </p>
+    </section>
+
+    <section id="mensajes">
+        <p>Tu mascota atacó con FUEGO, las mascota del enemigo atacó con TIERRA - GANASTE 🎉</p>
+    </section>
+
+    <section id="reiniciar">
+        <button>Reiniciar</button>
+    </section>
+</body>
+</html>
