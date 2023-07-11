@@ -4,6 +4,10 @@ let vidasJugador = 3
 let vidasEnemigo = 3
 
 function iniciarJuego() {
+    let seccionSeleccionrAtaque = document.getElementById('seleccionar-ataque')
+    seccionSeleccionrAtaque.style.display = 'none'
+    let sectionReiniciar = document.getElementById ('reiniciar')
+
     let botonMascotaJugador = document.getElementById('boton-mascota')
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
 
@@ -19,6 +23,12 @@ function iniciarJuego() {
 }
 
 function seleccionarMascotaJugador() {
+    let sectionSeleccionarMascota =  document.getElementById('seleccionar-mascota')
+    sectionSeleccionarMascota.style.display = 'none'
+
+    let sectionSeleccionaAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionaAtaque.style.display = 'block'
+
     let inputCharmander = document.getElementById('Charmander')
     let inputBulbasaur = document.getElementById('Bulbasaur')
     let inputSquirte = document.getElementById('Squirte')
@@ -135,6 +145,9 @@ function crearMensajeFinal(resultadoFinal){
     botonAgua.disabled = true
     let botonTierra = document.getElementById('boton-tierra')
     botonTierra.disabled = true
+
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'block'
 }
 
 function reiniciarJuego(){
