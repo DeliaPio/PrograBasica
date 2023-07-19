@@ -9,42 +9,59 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
  <body>
-    <h1 class ="titulo">POKEMON! 🔥💧🌱</h1>
 
     <section id="seleccionar-mascota">
-        <h2>Elige tu mascota:</h2>
+        <h1 class ="titulo">POKEMON! 🔥💧🌱</h1>
+        <h2 class="subtitulo" >Elige tu mascota:</h2>
 
-        <label for="Charmander">Charmander</label>
-        <input type="radio" name="mascota" id="Charmander"/>
-
-        <label for="Bulbasaur">Bulbasaur</label>
-        <input type="radio" name="mascota" id="Bulbasaur">
-
-        <label for="Squirte">Squirte</label>
-        <input type="radio" name="mascota" id="Squirte">
+        <div class="tarjetas">
+            <label class ="tarjeta-de-pokemon" for="Charmander">
+                <p>Charmander</p>
+                <img src="./Assets/pokemons_pokemon_charmander_attack.png" alt="Charmander">
+            </label>
+            <input type="radio" name="mascota" id="Charmander"/>
+    
+            <label class="tarjeta-de-pokemon" for="Bulbasaur">
+                <p>Bulbasaur</p>
+                <img src="./Assets/pokemons_pokemon_bulbasaur_attack.png" alt="Bulbasaur">
+            </label>
+            <input type="radio" name="mascota" id="Bulbasaur">
+    
+            <label class="tarjeta-de-pokemon" for="Squirte">
+                <p>Squirte</p>
+                <img src="./Assets/pokemons_pokemon_squirtle_attack.png" alt="Squirte">
+            </label>
+            <input type="radio" name="mascota" id="Squirte">
+    
+        </div>
 
         <button id="boton-mascota">Seleccionar</button>
     </section>
 
     <section id="seleccionar-ataque">
-        <h2>Elige tu ataque:</h2>
-
-        <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
-        <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>
+        <h1 class="titulo">Pokemon</h1>
+        <h2 class="subtitulo">Elige tu ataque:</h2>
        
-        <p>
-            <button id="boton-fuego">Fuego 🔥</button>
-            <button id="boton-agua">Agua 💧</button>
-            <button id="boton-tierra">Tierra 🌱</button>
-        </p>
-    </section>
-
-    <section id="mensajes">
+        <div>
+            <button id="boton-fuego" class="boton-de-ataque">Fuego 🔥</button>
+            <button id="boton-agua" class="boton-de-ataque">Agua 💧</button>
+            <button id="boton-tierra" class="boton-de-ataque">Tierra 🌱</button>
+        </div>  
         
+        <div>
+            <section id="mensajes">
+            </section>
+            <section id="reiniciar">
+                <button id="boton-reiniciar">Reiniciar</button>
+            </section>
+        </div>
+
+        <div>
+            <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
+            <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>
+        </div>
     </section>
 
-    <section id="reiniciar">
-        <button id="boton-reiniciar">Reiniciar</button>
-    </section>
+
 </body>
 </html>
